@@ -38,29 +38,26 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun InicializaTablas(){
-    val imaxesL = arrayOf<Painter>(
+    imaxes = arrayOf<Painter>(
         painterResource(R.drawable.lemon_drink),
         painterResource(R.drawable.lemon_restart),
         painterResource(R.drawable.lemon_squeeze),
         painterResource(R.drawable.lemon_tree)
     )
-    imaxes = imaxesL
 
-    val descricionsL = arrayOf<String>(
+    descricions = arrayOf<String>(
         stringResource(R.string.descricion_1),
         stringResource(R.string.descricion_2),
         stringResource(R.string.descricion_3),
         stringResource(R.string.descricion_4)
     )
-    descricions = descricionsL
 
-    val etiquetasL = arrayOf<String>(
+    etiquetas = arrayOf<String>(
         stringResource(R.string.etiqueta_1),
         stringResource(R.string.etiqueta_2),
         stringResource(R.string.etiqueta_3),
         stringResource(R.string.etiqueta_4)
     )
-    etiquetas = etiquetasL
 }
 
 @Composable
