@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Lemonade</string>
-    <string name="etiqueta_1">Tap the lemon tree to select a lemon</string>
-    <string name="etiqueta_2">Keep tapping the lemon to squeeze it</string>
-    <string name="etiqueta_3">Tap the lemonade to drink it</string>
-    <string name="etiqueta_4">Tap the empty glass to start again</string>
-    <string name="descricion_1">Lemon tree</string>
-    <string name="descricion_2">Lemon</string>
-    <string name="descricion_3">Glass of lemonade</string>
-    <string name="descricion_4">Empty glass</string>
+    <string name="etiqueta_1">Pulsa na árbore para seleccionar un limón</string>
+    <string name="etiqueta_2">Pulsa varias veces para exprimilo</string>
+    <string name="etiqueta_3">Pulsa para beber o zume</string>
+    <string name="etiqueta_4">Pulsa o vaso baleiro para comezar de novo</string>
+    <string name="descricion_1">Limonero</string>
+    <string name="descricion_2">Limón</string>
+    <string name="descricion_3">Vaso de limonada</string>
+    <string name="descricion_4">Vaso baleiro</string>
 </resources>

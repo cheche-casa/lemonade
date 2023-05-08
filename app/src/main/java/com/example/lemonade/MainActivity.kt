@@ -4,10 +4,13 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -18,10 +21,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign.Companion.Center
+import androidx.compose.ui.text.style.TextAlign.Companion.Justify
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.lemonade.ui.theme.LemonadeTheme
 
 
@@ -43,10 +51,10 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun InicializaTablas(){
     imaxes = arrayOf<Painter>(
-        painterResource(R.drawable.lemon_drink),
-        painterResource(R.drawable.lemon_restart),
+        painterResource(R.drawable.lemon_tree),
         painterResource(R.drawable.lemon_squeeze),
-        painterResource(R.drawable.lemon_tree)
+        painterResource(R.drawable.lemon_drink),
+        painterResource(R.drawable.lemon_restart)
     )
 
     descricions = arrayOf<String>(
@@ -82,12 +90,22 @@ fun PintaPantalla(modifier: Modifier = Modifier){
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Image(modifier = Modifier.clickable ( enabled = true, onClick = {indice++} ),
+        Image(modifier = Modifier
+            .clickable ( enabled = true, onClick = {
+                    indice++
+                    if (indice == 4){
+                        indice = 0
+                    }
+                }
+            )
+            .border(1.dp, Color.Red, shape = CutCornerShape(5.dp)),
             painter = imaxes[indice],
             contentDescription = descricions[indice]
         )
-        Text(
-            text = etiquetas[indice]
+        Text(modifier = modifier.padding(vertical = 18.dp, horizontal = 10.dp),
+            text = etiquetas[indice],
+            fontSize = 18.sp,
+            textAlign = Center
         )
     }
 }
