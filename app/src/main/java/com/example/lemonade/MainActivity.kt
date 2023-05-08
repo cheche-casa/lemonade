@@ -86,6 +86,7 @@ fun LemonApp() {
 @Composable
 fun PintaPantalla(modifier: Modifier = Modifier){
     var indice by remember { mutableStateOf(0) }
+    // mirar se é necesario o mutableStateOf
     var aleatorio by remember {mutableStateOf((1..3).random())}
     var veces = 0
 
